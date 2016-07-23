@@ -31,7 +31,9 @@ docker run -it -p 8080:8080 -p 4040:4040 -p 3000:3000 sadikovi/spark-spree:0.2.0
 ```
 For remapping ports in case some of them are already taken, refer to docker documentation.
 
-Once container has started, Spark UI should be available at http://localhost:8080.
+Once container has started, Spark UI should be available at
+[http://localhost:8080](http://localhost:8080). Note that you run it on Windows or OS X, you might
+need to use boot2docker IP instead of localhost: `docker-machine ip default`.
 
 To restart container run (for more info refer to docker documentation):
 ```
@@ -40,12 +42,12 @@ docker attach CONTAINER_NAME
 ```
 
 ## Start Spree
-To start **Spree** execute `/etc/spree.sh` in container. This starts Meteor + Mongo DB and `slim` server. Note
-that first start might take quite a while, because Meteor needs to set up project and download
+To start **Spree** execute `/etc/spree.sh` in container. This starts Meteor + Mongo DB and `slim`
+server. First start might take quite a while, because Meteor needs to set up project and download
 project dependencies. Subsequent times script should run fairly quickly.
 
-After this Spree UI should be available at http://localhost:3000. Spree shows Spark applications
-that are run in both local mode and cluster mode.
+After this Spree UI should be available at [http://localhost:3000](http://localhost:3000). Spree
+shows Spark applications that are run in both local mode and cluster mode.
 
 ## Try it
 Start `spark-shell` and run some simple Spark job to see live update in Spree.
