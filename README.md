@@ -44,7 +44,13 @@ docker attach CONTAINER_NAME
 ## Start Spree
 To start **Spree** execute `/etc/spree.sh` in container. This starts Meteor + Mongo DB and `slim`
 server. First start might take quite a while, because Meteor needs to set up project and download
-project dependencies. Subsequent times script should run fairly quickly.
+project dependencies. Subsequent times script should run fairly quickly. You can check that
+everything is running by running:
+```shell
+ps aux | grep meteor
+ps aux | grep mongod
+ps aux | grep slim
+```
 
 After this Spree UI should be available at [http://localhost:3000](http://localhost:3000). Spree
 shows Spark applications that are run in both local mode and cluster mode.
@@ -67,4 +73,10 @@ cd $SPREE_HOME/ui
 meteor &
 # this will start slim
 slim &
+```
+
+Sometimes `slim` takes a little bit of time to start, you can restart it by running:
+```shell
+cd $SPREE_HOME/ui
+slim
 ```
