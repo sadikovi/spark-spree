@@ -9,7 +9,7 @@ This is docker image of `Spark` + `Spree` setup. For more info refer to
 ## Pull or build
 You can pull image from docker hub directly
 ```shell
-$ docker pull
+docker pull sadikovi/spark-spree:0.2.0
 ```
 
 If image in docker hub is not available, or you want to build images locally, just run commands
