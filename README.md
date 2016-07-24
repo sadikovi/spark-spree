@@ -14,12 +14,11 @@ docker pull sadikovi/spark-spree:0.2.0
 
 If image in docker hub is not available, or you want to build images locally, just run commands
 below to create them:
-1. Building image for Spark 1.6.2
+- 1. Building image for Spark 1.6.2
 ```shell
 docker build --tag=sadikovi/spark:1.6.2 ./spark
 ```
-
-2. Building image for Spree 0.2.0:
+- 2. Building image for Spree 0.2.0:
 ```shell
 docker build --tag=sadikovi/spark-spree:0.2.0 ./spree
 ```
