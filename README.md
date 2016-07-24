@@ -64,6 +64,9 @@ scala> df.count()
 ```
 
 ## When something goes wrong
+What usually happens is that `slim` does not start the very first time, in this case try 
+re-running `/etc/spree.sh` again, and check that it is running by `ps aux | grep slim`.
+
 You can always start Spree manually following documentation on repository page. Note that all
 dependencies are already installed:
 ```shell
